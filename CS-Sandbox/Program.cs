@@ -54,6 +54,28 @@ namespace CS_Sandbox
             // Using the var variable
             var test = name;
             Console.WriteLine(test);
+
+            //TypesConversion
+            // Declare your variables in one place
+            int serialNo = 100;
+            string accountNo = "";
+            float anyNo = 4.8f;
+
+            // accountNo = serialNo; *** cannot convert 'int' to 'string' (use a conversion method see example below) ***
+            accountNo = serialNo.ToString();
+            Console.WriteLine(accountNo);
+
+            // serialNo = anyNo; *** cannot convert 'float' to 'int'
+            serialNo = Convert.ToInt32(anyNo);
+            Console.WriteLine(serialNo);
+
+            string message = "hello" + "world";
+            Console.WriteLine(message);
+
+            int n = 18 % 4;
+            MessageBox.Show(n.ToString());
+
+            const double PI = 3.14;
         }
     }
 }
